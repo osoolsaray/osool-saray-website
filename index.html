@@ -285,124 +285,144 @@
         </div>
     </section>
 
-    <!-- Ten-Grid Licensed Business Activities Section (Updated without RAKEZ codes) -->
-    <section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-8">
+    <!-- Dropdown Accordion: 10 Licensed Business Activities Section -->
+    <section id="services" class="py-16 max-w-5xl mx-auto px-4 sm:px-8">
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <span class="text-gold font-semibold tracking-widest uppercase text-xs">RAKEZ Official Licensing</span>
             <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-forest">Our 10 Licensed Business Activities</h2>
             <p class="text-charcoal/80 text-sm sm:text-base">
-                Comprehensively authorized to deliver professional advisory, brokerage, management, and administrative services across the UAE.
+                Click any activity below to view detailed scope and authorization parameters.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 1 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 1</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Real Estate Consultancy</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Providing expert advice on market trends, property values, investment opportunities, legal/financial aspects, and ROI optimization.
-                    </p>
+        <div class="space-y-3">
+            <!-- Item 1 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-1')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">01</span> Real Estate Consultancy
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-1"></i>
+                </button>
+                <div id="acc-1" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Providing expert advice on market trends, property values, investment opportunities, legal/financial aspects, and ROI optimization.
                 </div>
             </div>
 
-            <!-- 2 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 2</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Real Estate Purchase and Sale Brokerage - Available Soon</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Acting as an intermediary in buying and selling freehold or leasehold properties and land plots across the UAE real estate market.
-                    </p>
+            <!-- Item 2 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-2')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">02</span> Real Estate Purchase and Sale Brokerage - Available Soon
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-2"></i>
+                </button>
+                <div id="acc-2" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Acting as an intermediary in buying and selling freehold or leasehold properties and land plots across the UAE real estate market.
                 </div>
             </div>
 
-            <!-- 3 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 3</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Real Estate Leasing Brokerage</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Connecting landlords and tenants regarding property leases against remuneration, concluding upon successful agreement execution.
-                    </p>
+            <!-- Item 3 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-3')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">03</span> Real Estate Leasing Brokerage
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-3"></i>
+                </button>
+                <div id="acc-3" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Connecting landlords and tenants regarding property leases against remuneration, concluding upon successful agreement execution.
                 </div>
             </div>
 
-            <!-- 4 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 4</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Property Management Services</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Managing residential, commercial, industrial buildings, and offices, restricted to long-term or temporary renting, improvement, and maintenance.
-                    </p>
+            <!-- Item 4 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-4')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">04</span> Property Management Services
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-4"></i>
+                </button>
+                <div id="acc-4" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Managing residential, commercial, industrial buildings, and offices, restricted to long-term or temporary renting, improvement, and maintenance.
                 </div>
             </div>
 
-            <!-- 5 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 5</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Mortgage Brokerage</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Assisting borrowers in securing optimal financing conditions from lenders and commercial banks without exercising direct lending.
-                    </p>
+            <!-- Item 5 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-5')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">05</span> Mortgage Brokerage
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-5"></i>
+                </button>
+                <div id="acc-5" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Assisting borrowers in securing optimal financing conditions from lenders and commercial banks without exercising direct lending.
                 </div>
             </div>
 
-            <!-- 6 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 6</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Commercial Brokerage</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Bringing together buyers and sellers involved in general trade, commercial domains, and finance (excluding direct trading on own account).
-                    </p>
+            <!-- Item 6 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-6')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">06</span> Commercial Brokerage
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-6"></i>
+                </button>
+                <div id="acc-6" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Bringing together buyers and sellers involved in general trade, commercial domains, and finance (excluding direct trading on own account).
                 </div>
             </div>
 
-            <!-- 7 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 7</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Investment Consultancy</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Non-discretionary investment research, market analysis, and strategic consultancy restricted to institutional and corporate clients.
-                    </p>
+            <!-- Item 7 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-7')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">07</span> Investment Consultancy
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-7"></i>
+                </button>
+                <div id="acc-7" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Non-discretionary investment research, market analysis, and strategic consultancy restricted to institutional and corporate clients.
                 </div>
             </div>
 
-            <!-- 8 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 8</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Project Management Services</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Planning, organizing, and managing resources and schedules for real estate development and corporate business projects.
-                    </p>
+            <!-- Item 8 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-8')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">08</span> Project Management Services
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-8"></i>
+                </button>
+                <div id="acc-8" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Planning, organizing, and managing resources and schedules for real estate development and corporate business projects.
                 </div>
             </div>
 
-            <!-- 9 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 9</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Document Clearing Services</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Submitting personal and corporate documents to government and non-government bodies until finalization (excluding medical-fitness services).
-                    </p>
+            <!-- Item 9 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-9')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">09</span> Document Clearing Services
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-9"></i>
+                </button>
+                <div id="acc-9" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Submitting personal and corporate documents to government and non-government bodies until finalization (excluding medical-fitness services).
                 </div>
             </div>
 
-            <!-- 10 -->
-            <div class="bg-white p-6 rounded-xl shadow border border-gold/30 hover:border-forest transition flex flex-col justify-between md:col-span-2 lg:col-span-1">
-                <div>
-                    <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-1">Activity 10</span>
-                    <h3 class="font-cinzel text-lg font-bold text-forest mb-2">Marketing Management</h3>
-                    <p class="text-charcoal/70 text-xs leading-relaxed">
-                        Assisting businesses with product/service promotion, planning, pricing, sale outlets, and digital marketing strategies.
-                    </p>
+            <!-- Item 10 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gold/30 overflow-hidden transition">
+                <button onclick="toggleAccordion('acc-10')" class="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-cream/50 transition">
+                    <span class="font-cinzel font-bold text-sm sm:text-base text-forest flex items-center gap-3">
+                        <span class="text-xs text-gold font-bold">10</span> Marketing Management
+                    </span>
+                    <i class="fas fa-chevron-down text-gold transition-transform duration-300" id="icon-acc-10"></i>
+                </button>
+                <div id="acc-10" class="hidden px-6 pb-4 text-xs sm:text-sm text-charcoal/80 border-t border-gold/10 pt-3 bg-cream/20">
+                    Assisting businesses with product/service promotion, planning, pricing, sale outlets, and digital marketing strategies.
                 </div>
             </div>
         </div>
@@ -605,7 +625,6 @@
                     <div id="crm-tab-queue" class="space-y-4">
                         <div class="flex justify-between items-center">
                             <h4 class="font-cinzel font-bold text-base text-gold">Incoming Leads & Inquiries Queue</h4>
-                            <button onclick="openAddLeadModal()" class="gold-gradient text-forest px-3 py-1.5 rounded text-xs font-bold">Add Manual Lead</button>
                         </div>
                         <div class="overflow-x-auto bg-forest-dark rounded-xl border border-gold/20">
                             <table class="w-full text-left text-xs">
@@ -757,6 +776,14 @@
 
         function toggleMobileMenu() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Accordion Toggle Function for Dropdown Activities
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
         }
 
         function promptStaffLogin() {
@@ -1012,7 +1039,7 @@
             });
 
             document.getElementById('partner-submission-form').reset();
-            document.getElementById('partner-success').classList.remove('hidden');
+            document.getElementById('partner-success').classList.add('hidden');
             renderCrmQueue();
             renderCrmPipeline();
         }
