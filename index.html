@@ -1,427 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Osool Saray Properties Brokerage and Consultancy FZ LLC</title>
-  <!-- Google Fonts: Cinzel and Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    /* Global Styles & Brand Colors */
-    :root {
-      --forest-green: #1A3C34;
-      --warm-cream: #FDFBF7;
-      --champagne-gold: #D4AF37;
-      --gold-hover: #E2C04D;
-      --text-dark: #2C2C2C;
-      --text-muted: #555555;
-      --white: #FFFFFF;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osool Saray Properties Brokerage and Consultancy FZ LLC</title>
+    <!-- Google Fonts: Cinzel and Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #1B3B2B;
+            --warm-cream: #F9F6F0;
+            --champagne-gold: #D4AF37;
+            --dark-charcoal: #2C2C2C;
+            --white: #FFFFFF;
+            --light-bg: #F4EFE6;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--warm-cream);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    /* Navigation Bar */
-    navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: var(--forest-green);
-      color: var(--warm-cream);
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid var(--champagne-gold);
-      z-index: 1000;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--warm-cream);
+            color: var(--dark-charcoal);
+            line-height: 1.6;
+        }
 
-    .nav-brand h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.2rem;
-      color: var(--warm-cream);
-      letter-spacing: 1px;
-    }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+            color: var(--forest-green);
+        }
 
-    .nav-brand p {
-      font-size: 0.65rem;
-      color: var(--champagne-gold);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+        /* Header / Navbar */
+        header {
+            background-color: var(--forest-green);
+            color: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--champagne-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
+        .logo h1 {
+            color: var(--champagne-gold);
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
 
-    .nav-links a {
-      color: var(--warm-cream);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-    .nav-links a:hover {
-      color: var(--champagne-gold);
-    }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-    /* Hero Section */
-    .hero-section {
-      position: relative;
-      background-color: var(--forest-green);
-      /* Fallback gradient ensures reliable display; replace placeholder URL with actual image asset */
-      background-image: linear-gradient(rgba(26, 60, 52, 0.85), rgba(26, 60, 52, 0.85)), url('path/to/your-hero-image.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 20px 80px 20px;
-      color: var(--warm-cream);
-    }
+        nav a:hover {
+            color: var(--champagne-gold);
+        }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 850px;
-      margin: 0 auto;
-    }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(27, 59, 43, 0.92) 0%, rgba(20, 45, 32, 0.88) 100%), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 20px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .hero-subtitle {
-      font-size: 0.9rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--champagne-gold);
-      display: block;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--champagne-gold);
+            margin-bottom: 20px;
+        }
 
-    .hero-section h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      color: var(--warm-cream);
-      line-height: 1.2;
-    }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+            color: #f1f1f1;
+        }
 
-    .hero-content p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-      color: #E5E9E7;
-    }
+        .btn {
+            background-color: var(--champagne-gold);
+            color: var(--forest-green);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            transition: background 0.3s ease;
+        }
 
-    .btn-primary {
-      display: inline-block;
-      background-color: var(--champagne-gold);
-      color: var(--forest-green);
-      padding: 14px 32px;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
+        .btn:hover {
+            background-color: #e5c158;
+        }
 
-    .btn-primary:hover {
-      background-color: var(--gold-hover);
-    }
+        /* About Us Section */
+        .about-section {
+            padding: 90px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-    /* About Section */
-    .about-section {
-      padding: 90px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
 
-    .about-section h2 {
-      font-family: 'Cinzel', serif;
-      color: var(--forest-green);
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--champagne-gold);
+            margin: 10px auto 0;
+        }
 
-    .about-section p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
+        .about-section p {
+            font-size: 1.05rem;
+            color: #444;
+            max-width: 850px;
+            margin: 20px auto 0;
+            line-height: 1.8;
+        }
 
-    /* Core Services Section */
-    .core-services-section {
-      padding: 90px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      background-color: #F4F0E6;
-      border-radius: 8px;
-      margin-bottom: 60px;
-    }
+        /* Divisions Section */
+        .divisions-section {
+            padding: 90px 5%;
+            background-color: var(--light-bg);
+        }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+        .divisions-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .section-header h2 {
-      font-family: 'Cinzel', serif;
-      color: var(--forest-green);
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
+        .divisions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
 
-    .section-header p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-    }
+        .division-card {
+            background-color: var(--white);
+            border-top: 4px solid var(--champagne-gold);
+            padding: 40px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
 
-    .core-services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 30px;
-    }
+        .division-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--forest-green);
+        }
 
-    .service-division {
-      background: var(--white);
-      border-top: 5px solid var(--champagne-gold);
-      padding: 35px 30px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      border-radius: 4px;
-    }
+        .division-card ul {
+            list-style: none;
+        }
 
-    .service-division h3 {
-      font-family: 'Cinzel', serif;
-      color: var(--forest-green);
-      margin-bottom: 25px;
-      font-size: 1.35rem;
-      border-bottom: 1px solid #EAE5D9;
-      padding-bottom: 12px;
-    }
+        .division-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .service-list {
-      list-style: none;
-    }
+        .division-card li:last-child {
+            border-bottom: none;
+        }
 
-    .service-list li {
-      margin-bottom: 20px;
-    }
+        .badge {
+            background-color: var(--champagne-gold);
+            color: var(--forest-green);
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
 
-    .service-list li:last-child {
-      margin-bottom: 0;
-    }
+        .note {
+            display: block;
+            font-size: 0.75rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 4px;
+        }
 
-    .service-list strong {
-      display: block;
-      color: var(--forest-green);
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
+        /* Landlords & Partners Section */
+        .partners-section {
+            padding: 90px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
 
-    .service-list span {
-      display: block;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
+        .partners-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
 
-    /* Contact Section */
-    .contact-section {
-      padding: 80px 20px;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
+        .partners-content p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #444;
+        }
 
-    .contact-section h2 {
-      font-family: 'Cinzel', serif;
-      color: var(--forest-green);
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
+        .partners-card-box {
+            background-color: var(--white);
+            border: 1px solid #e0d8c9;
+            padding: 40px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
 
-    .contact-info {
-      background: var(--white);
-      padding: 40px;
-      border-radius: 6px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      border-left: 4px solid var(--champagne-gold);
-      text-align: left;
-      margin-top: 30px;
-    }
+        .partners-card-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--forest-green);
+        }
 
-    .contact-info p {
-      margin-bottom: 15px;
-      color: var(--text-dark);
-      font-size: 1rem;
-    }
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--forest-green);
+            color: var(--white);
+            padding: 90px 5%;
+            text-align: center;
+        }
 
-    .contact-info strong {
-      color: var(--forest-green);
-    }
+        .contact-section h2 {
+            color: var(--champagne-gold);
+            margin-bottom: 20px;
+        }
 
-    /* Footer */
-    footer {
-      background-color: var(--forest-green);
-      color: var(--warm-cream);
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.85rem;
-      border-top: 1px solid rgba(212, 175, 55, 0.3);
-    }
+        .contact-section p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+            color: #dedede;
+        }
 
-    footer p {
-      color: #C8D3D0;
-      margin-top: 10px;
-    }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
 
-    .footer-brand {
-      font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
-      color: var(--warm-cream);
-      margin-bottom: 5px;
-    }
-  </style>
+        .contact-info div {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 30px;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #12271c;
+            color: var(--white);
+            padding: 60px 5% 20px;
+            border-top: 3px solid var(--champagne-gold);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3, .footer-col h4 {
+            color: var(--champagne-gold);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: #d0d0d0;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            color: #dcdcdc;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .footer-col ul li .badge {
+            font-size: 0.6rem;
+            padding: 2px 5px;
+        }
+
+        .footer-col .note {
+            color: #b0b0b0;
+            font-size: 0.75rem;
+            width: 100%;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: 0.8rem;
+            color: #b0b0b0;
+        }
+
+        @media (max-width: 768px) {
+            .partners-section {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <navbar>
-    <div class="nav-brand">
-      <h1>Osool Saray Properties</h1>
-      <p>Brokerage and Consultancy FZ LLC</p>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#core-services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </navbar>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">
+            <h1>Osool Saray Properties</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#divisions">Divisions</a></li>
+                <li><a href="#partners">Landlords & Partners</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
-    <div class="hero-content">
-      <span class="hero-subtitle">Brokerage and Consultancy FZ LLC</span>
-      <h2>Excellence in Real Estate, Business &amp; Consultancy</h2>
-      <p>Guiding your investments and enterprise growth across the UAE with strategic expertise.</p>
-      <div class="hero-cta">
-        <a href="#core-services" class="btn-primary">Explore Our Services</a>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Excellence in Real Estate & Business Consultancy</h2>
+        <p>Your strategic corporate partner delivering premier expertise across real estate brokerage, business services, and professional consultancy in the UAE.</p>
+        <a href="#divisions" class="btn">Explore Our Divisions</a>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <h2>About Osool Saray</h2>
-    <p>Osool Saray Properties Brokerage and Consultancy FZ LLC delivers multidisciplinary professional services across the United Arab Emirates. Operating across three core pillars—Real Estate, Business Services, and specialized Consultancy—we provide tailored, high-standard advisory and execution solutions designed to empower clients, optimize assets, and drive sustainable growth.</p>
-  </section>
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">About Osool Saray Properties</h2>
+        <p>Osool Saray Properties Brokerage and Consultancy FZ LLC is built on a foundation of integrity, market insight, and multi-disciplinary expertise. We bridge the gap between high-value property advisory and comprehensive corporate business solutions, empowering investors, landlords, and corporate entities to navigate the UAE market with absolute confidence.</p>
+    </section>
 
-  <!-- Core Services & Divisions Section -->
-  <section id="core-services" class="core-services-section">
-    <div class="section-header">
-      <h2>Core Services &amp; Divisions</h2>
-      <p>Our 10 authorized business activities structured across three specialized pillars.</p>
-    </div>
+    <!-- Main Divisions Section -->
+    <section id="divisions" class="divisions-section">
+        <div class="divisions-container">
+            <h2 class="section-title" style="text-align: center;">Our 3 Core Divisions</h2>
+            <div class="divisions-grid">
+                
+                <!-- Division 1 -->
+                <div class="division-card">
+                    <h3>1. Real Estate</h3>
+                    <ul>
+                        <li>Real Estate Leasing Brokerage</li>
+                        <li>
+                            Real Estate Purchase & Sale
+                            <span class="badge">Available Soon</span>
+                        </li>
+                        <li>Real Estate Consultancy</li>
+                        <li>Property Management Services</li>
+                        <li>Mortgage Brokerage</li>
+                    </ul>
+                </div>
 
-    <div class="core-services-grid">
-      <!-- Division 1: Real Estate -->
-      <div class="service-division">
-        <h3>1) Real Estate</h3>
-        <ul class="service-list">
-          <li>
-            <strong>Real Estate Leasing Brokerage</strong>
-            <span>Expert management and advisory for leasing residential and commercial properties.</span>
-          </li>
-          <li>
-            <strong>Real Estate Purchase and Sale Brokerage</strong>
-            <span>Comprehensive transaction brokerage for property acquisitions and disposals <em>(Available soon)</em>.</span>
-          </li>
-          <li>
-            <strong>Real Estate Consultancy</strong>
-            <span>Professional guidance on market valuations, trends, and portfolio growth.</span>
-          </li>
-          <li>
-            <strong>Property Management Services</strong>
-            <span>End-to-end asset oversight, tenant relations, and maintenance coordination.</span>
-          </li>
-          <li>
-            <strong>Mortgage Brokerage</strong>
-            <span>Financial advisory and liaison services to secure optimal home loans and financing.</span>
-          </li>
-        </ul>
-      </div>
+                <!-- Division 2 -->
+                <div class="division-card">
+                    <h3>2. Business Services</h3>
+                    <ul>
+                        <li>Marketing Management</li>
+                        <li>Project Management Consultancy</li>
+                        <li>Documents Clearing Services</li>
+                    </ul>
+                </div>
 
-      <!-- Division 2: Business Services -->
-      <div class="service-division">
-        <h3>2) Business Services</h3>
-        <ul class="service-list">
-          <li>
-            <strong>Marketing Management</strong>
-            <span>Strategic promotional planning, digital campaigns, and brand visibility execution.</span>
-          </li>
-          <li>
-            <strong>Project Management Consultancy</strong>
-            <span>Specialized oversight to plan, execute, and deliver business or development projects efficiently.</span>
-          </li>
-          <li>
-            <strong>Documents Clearing Services</strong>
-            <span>Streamlined processing of official paperwork, government documentation, and regulatory filings.</span>
-          </li>
-        </ul>
-      </div>
+                <!-- Division 3 -->
+                <div class="division-card">
+                    <h3>3. Consultancy</h3>
+                    <ul>
+                        <li>Investment Consultancy</li>
+                        <li>
+                            Commercial Brokerage
+                            <span class="note">General commercial/business brokerage (not commercial real estate)</span>
+                        </li>
+                    </ul>
+                </div>
 
-      <!-- Division 3: Consultancy -->
-      <div class="service-division">
-        <h3>3) Consultancy</h3>
-        <ul class="service-list">
-          <li>
-            <strong>Investment Consultancy</strong>
-            <span>Professional wealth-building strategies, portfolio diversification, and asset allocation advice.</span>
-          </li>
-          <li>
-            <strong>Commercial Brokerage</strong>
-            <span>General commercial and business brokerage services <em>(facilitating business sales, partnerships, and corporate transactions—not commercial real estate)</em>.</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <h2>Get in Touch</h2>
-    <p>Connect with our team to discuss your real estate, business, or consultancy requirements.</p>
-    
-    <div class="contact-info">
-      <p><strong>Company:</strong> Osool Saray Properties Brokerage and Consultancy FZ LLC</p>
-      <p><strong>Location:</strong> United Arab Emirates</p>
-      <p><strong>Inquiries:</strong> Available via appointment and direct consultation.</p>
-    </div>
-  </section>
+    <!-- Landlords & Partners Section -->
+    <section id="partners" class="partners-section">
+        <div class="partners-content">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Landlords & Strategic Partners</h2>
+            <p>We work hand-in-hand with property owners, developers, and corporate collaborators to maximize portfolio performance and streamline corporate operations across the UAE.</p>
+            <p>Whether you are looking to optimize leasing yields, manage complex project workflows, or explore strategic investment opportunities, our multi-division capabilities offer end-to-end execution.</p>
+        </div>
+        <div class="partners-card-box">
+            <h3>Partner With Us</h3>
+            <p style="margin-bottom: 15px; font-size: 0.9rem;">Join forces with a trusted name in UAE real estate and corporate advisory.</p>
+            <a href="#contact" class="btn" style="display: inline-block; text-align: center;">Get in Touch</a>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-brand">Osool Saray Properties Brokerage and Consultancy FZ LLC</div>
-    <p>&copy; 2026 All Rights Reserved.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Reach out to our team for professional consultations, property inquiries, and corporate solutions.</p>
+        <div class="contact-info">
+            <div>
+                <strong>Location</strong><br>
+                United Arab Emirates
+            </div>
+            <div>
+                <strong>Email</strong><br>
+                info@osoolsaray.com
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col">
+                <h3>Osool Saray Properties</h3>
+                <p>Brokerage and Consultancy FZ LLC. Your multi-faceted partner for premier property and corporate solutions in the UAE.</p>
+            </div>
+
+            <!-- Column 2: Real Estate -->
+            <div class="footer-col">
+                <h4>1. Real Estate</h4>
+                <ul>
+                    <li>Real Estate Leasing Brokerage</li>
+                    <li>Real Estate Purchase & Sale <span class="badge">Soon</span></li>
+                    <li>Real Estate Consultancy</li>
+                    <li>Property Management Services</li>
+                    <li>Mortgage Brokerage</li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Business Services -->
+            <div class="footer-col">
+                <h4>2. Business Services</h4>
+                <ul>
+                    <li>Marketing Management</li>
+                    <li>Project Management Consultancy</li>
+                    <li>Documents Clearing Services</li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Consultancy -->
+            <div class="footer-col">
+                <h4>3. Consultancy</h4>
+                <ul>
+                    <li>Investment Consultancy</li>
+                    <li>
+                        Commercial Brokerage 
+                        <span class="note">(General commercial/business brokerage)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Osool Saray Properties Brokerage and Consultancy FZ LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
