@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Osool Saray Properties Brokerage and Consultancy FZ LLC</title>
   <!-- Google Fonts: Cinzel and Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     /* Global Styles & Brand Colors */
     :root {
@@ -15,12 +15,14 @@
       --gold-hover: #E2C04D;
       --text-dark: #2C2C2C;
       --text-muted: #555555;
+      --white: #FFFFFF;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -30,46 +32,69 @@
       line-height: 1.6;
     }
 
-    /* Header / Navbar */
-    header {
+    /* Navigation Bar */
+    navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: var(--forest-green);
       color: var(--warm-cream);
-      padding: 20px 40px;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 2px solid var(--champagne-gold);
+      z-index: 1000;
     }
 
-    .logo-area h1 {
+    .nav-brand h1 {
       font-family: 'Cinzel', serif;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: var(--warm-cream);
       letter-spacing: 1px;
     }
 
-    .logo-area p {
-      font-size: 0.75rem;
+    .nav-brand p {
+      font-size: 0.65rem;
       color: var(--champagne-gold);
       letter-spacing: 1.5px;
       text-transform: uppercase;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--warm-cream);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--champagne-gold);
     }
 
     /* Hero Section */
     .hero-section {
       position: relative;
       background-color: var(--forest-green);
-      /* Replace 'path/to/your-hero-image.jpg' with your actual image file or URL */
-      background-image: linear-gradient(rgba(26, 60, 52, 0.8), rgba(26, 60, 52, 0.8)), url('path/to/your-hero-image.jpg');
+      /* Fallback gradient ensures reliable display; replace placeholder URL with actual image asset */
+      background-image: linear-gradient(rgba(26, 60, 52, 0.85), rgba(26, 60, 52, 0.85)), url('path/to/your-hero-image.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      min-height: 80vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 20px;
+      padding: 120px 20px 80px 20px;
       color: var(--warm-cream);
     }
 
@@ -119,11 +144,35 @@
       background-color: var(--gold-hover);
     }
 
+    /* About Section */
+    .about-section {
+      padding: 90px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--forest-green);
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
     /* Core Services Section */
     .core-services-section {
-      padding: 80px 20px;
+      padding: 90px 20px;
       max-width: 1200px;
       margin: 0 auto;
+      background-color: #F4F0E6;
+      border-radius: 8px;
+      margin-bottom: 60px;
     }
 
     .section-header {
@@ -150,7 +199,7 @@
     }
 
     .service-division {
-      background: #FFFFFF;
+      background: var(--white);
       border-top: 5px solid var(--champagne-gold);
       padding: 35px 30px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
@@ -193,30 +242,79 @@
       line-height: 1.5;
     }
 
+    /* Contact Section */
+    .contact-section {
+      padding: 80px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--forest-green);
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 6px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--champagne-gold);
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    .contact-info p {
+      margin-bottom: 15px;
+      color: var(--text-dark);
+      font-size: 1rem;
+    }
+
+    .contact-info strong {
+      color: var(--forest-green);
+    }
+
     /* Footer */
     footer {
       background-color: var(--forest-green);
       color: var(--warm-cream);
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
       font-size: 0.85rem;
       border-top: 1px solid rgba(212, 175, 55, 0.3);
     }
 
     footer p {
       color: #C8D3D0;
+      margin-top: 10px;
+    }
+
+    .footer-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--warm-cream);
+      margin-bottom: 5px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo-area">
+  <!-- Navigation Bar -->
+  <navbar>
+    <div class="nav-brand">
       <h1>Osool Saray Properties</h1>
       <p>Brokerage and Consultancy FZ LLC</p>
     </div>
-  </header>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#core-services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </navbar>
 
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
@@ -228,6 +326,12 @@
         <a href="#core-services" class="btn-primary">Explore Our Services</a>
       </div>
     </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About Osool Saray</h2>
+    <p>Osool Saray Properties Brokerage and Consultancy FZ LLC delivers multidisciplinary professional services across the United Arab Emirates. Operating across three core pillars—Real Estate, Business Services, and specialized Consultancy—we provide tailored, high-standard advisory and execution solutions designed to empower clients, optimize assets, and drive sustainable growth.</p>
   </section>
 
   <!-- Core Services & Divisions Section -->
@@ -301,9 +405,22 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>Connect with our team to discuss your real estate, business, or consultancy requirements.</p>
+    
+    <div class="contact-info">
+      <p><strong>Company:</strong> Osool Saray Properties Brokerage and Consultancy FZ LLC</p>
+      <p><strong>Location:</strong> United Arab Emirates</p>
+      <p><strong>Inquiries:</strong> Available via appointment and direct consultation.</p>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Osool Saray Properties Brokerage and Consultancy FZ LLC. All Rights Reserved.</p>
+    <div class="footer-brand">Osool Saray Properties Brokerage and Consultancy FZ LLC</div>
+    <p>&copy; 2026 All Rights Reserved.</p>
   </footer>
 
 </body>
