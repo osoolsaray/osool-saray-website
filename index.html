@@ -115,9 +115,8 @@
             <a href="#home" onclick="toggleMobileMenu()" class="block text-forest font-semibold py-1">Home</a>
             <a href="#about" onclick="toggleMobileMenu()" class="block text-charcoal py-1">About Us</a>
             <a href="#realestate" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Real Estate</a>
-            <a href="#services" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Business Activities</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Business Services</a>
             <a href="#partners" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Partners & Landlords</a>
-            <a href="#crm" onclick="toggleMobileMenu()" class="block text-gold font-semibold py-1">CRM Portal</a>
             <a href="#contact" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Contact Us</a>
         </div>
     </header>
@@ -130,7 +129,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/20 border border-gold/40 text-gold text-xs font-semibold tracking-wider uppercase">
-                    <i class="fas fa-certificate"></i> RAKEZ Licensed Entity (CWEP8470)
+                    <i class="fas fa-certificate"></i> RAKEZ Licensed Entity
                 </div>
                 <h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                     Professional Advice. <span class="text-gold">Practical Solutions.</span>
@@ -142,14 +141,11 @@
                     <a href="#realestate" class="gold-gradient text-forest font-bold px-8 py-3.5 rounded-md shadow-lg text-center hover:opacity-95 transition flex items-center justify-center gap-2">
                         Explore Portfolio <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#crm" class="bg-transparent hover:bg-cream/10 text-cream font-semibold px-8 py-3.5 rounded-md border border-gold/50 text-center transition flex items-center justify-center gap-2">
-                        Client & Agent CRM <i class="fas fa-database"></i>
-                    </a>
                 </div>
 
                 <div class="pt-8 grid grid-cols-3 gap-4 border-t border-gold/20 text-xs sm:text-sm text-cream/80">
                     <div>
-                        <span class="block font-cinzel font-bold text-gold text-xl">8</span>
+                        <span class="block font-cinzel font-bold text-gold text-xl">10</span>
                         Official Activities
                     </div>
                     <div>
@@ -166,17 +162,17 @@
             <!-- Quick Inquiry Card -->
             <div class="lg:col-span-5 bg-cream text-charcoal p-6 sm:p-8 rounded-2xl shadow-2xl border border-gold/30">
                 <h3 class="font-cinzel text-2xl font-bold text-forest mb-2">Direct Enquiry</h3>
-                <p class="text-xs text-charcoal/70 mb-6">Connect directly with our administrative team for immediate assistance.</p>
+                <p class="text-xs text-charcoal/70 mb-6">Connect directly with our sales team for immediate assistance.</p>
                 
                 <form id="public-enquiry-form" onsubmit="handlePublicEnquiry(event)" class="space-y-4">
                     <div>
                         <label class="block text-xs font-semibold uppercase text-forest mb-1">Full Name *</label>
-                        <input type="text" id="enq-name" required placeholder="e.g. Alexander Vance" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
+                        <input type="text" id="enq-name" required placeholder="e.g. Jane Sunio" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div>
                             <label class="block text-xs font-semibold uppercase text-forest mb-1">Email Address *</label>
-                            <input type="email" id="enq-email" required placeholder="alex@domain.com" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
+                            <input type="email" id="enq-email" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase text-forest mb-1">Phone / WhatsApp *</label>
@@ -186,12 +182,16 @@
                     <div>
                         <label class="block text-xs font-semibold uppercase text-forest mb-1">Service Interest</label>
                         <select id="enq-service" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
+                            <option value="Real Estate Consultancy">Real Estate Leasing Brokerage</option>
+                            <option value="Real Estate Purchase and Sale Brokerage">Real Estate Purchase and Sale Brokerage</option>
                             <option value="Real Estate Leasing">Real Estate Leasing Brokerage</option>
-                            <option value="Property Management">Property Management Services</option>
-                            <option value="Investment Consultancy">Investment Consultancy</option>
+                            <option value="Property Management Services">Property Management Services</option>
                             <option value="Mortgage Brokerage">Mortgage Brokerage</option>
-                            <option value="Commercial Brokers">Commercial Brokers</option>
-                            <option value="Document Clearing">Document Clearing Services</option>
+                            <option value="Commercial Brokerage">Commercial Brokerage</option>
+                            <option value="Investment Consultancy">Investment Consultancy</option>
+                            <option value="Project Management Services">Project Management Services</option>
+                            <option value="Business Setup Services">Business Setup</option>
+                            <option value="Marketing Management">Marketing Management</option>
                         </select>
                     </div>
                     <div>
@@ -214,7 +214,7 @@
     <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-6 space-y-6">
-                <span class="text-gold font-semibold tracking-widest uppercase text-xs">About Osool Saray</span>
+                <span class="text-gold font-semibold tracking-widest uppercase text-xs">About Osool Saray Properties</span>
                 <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-forest">Institutional Excellence & Boutique Advisory</h2>
                 <p class="text-charcoal/80 text-base leading-relaxed">
                     Based in the vibrant business ecosystem of Ras Al Khaimah Economic Zone (RAKEZ), Osool Saray Properties Brokerage and Consultancy FZ-LLC is built upon the foundational corporate motto: <strong>Professional Advice. Practical Solutions.</strong>
