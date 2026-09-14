@@ -265,24 +265,27 @@
         </div>
     </section>
 
-    <!-- Real Estate Portfolio -->
+    <!-- Real Estate Portfolio & Commercial Zones -->
     <section id="realestate" class="bg-cream-dark py-16 border-y border-gold/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
                 <span class="text-gold font-semibold tracking-widest uppercase text-xs">Featured Portfolio</span>
                 <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-forest">Real Estate Leasing & Management</h2>
                 <p class="text-charcoal/80 text-sm sm:text-base">
-                    Explore our premier rental and leasing properties in Ras Al Khaimah and across key UAE communities.
+                    Explore our premier rental properties and RAKEZ commercial and industrial zones across the UAE.
                 </p>
                 
+                <!-- Updated Filter Buttons -->
                 <div class="flex flex-wrap justify-center gap-2 pt-3">
-                    <button onclick="filterProperties('all')" class="prop-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-forest text-cream transition shadow">All Listings</button>
-                    <button onclick="filterProperties('RAK')" class="prop-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Ras Al Khaimah</button>
+                    <button onclick="filterProperties('all')" class="prop-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-forest text-cream transition shadow">All Listing</button>
+                    <button onclick="filterProperties('RAK')" class="prop-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Ras Al Khaima</button>
                     <button onclick="filterProperties('Dubai')" class="prop-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Dubai</button>
+                    <button onclick="filterProperties('Other Emirates')" class="prop-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Other Emirates</button>
                     <button onclick="filterProperties('Commercial')" class="prop-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Commercial</button>
                 </div>
             </div>
 
+            <!-- Property Grid -->
             <div id="property-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Populated via JS -->
             </div>
@@ -701,7 +704,7 @@
                 id: "OSP-RAK-01",
                 title: "Luxury Beachfront Villa",
                 location: "Al Hamra Village, Ras Al Khaimah",
-                emirate: "RAK",
+                category: "RAK",
                 type: "Residential",
                 beds: 4,
                 price: "185,000 AED / year",
@@ -714,7 +717,7 @@
                 id: "OSP-RAK-02",
                 title: "Marina View Executive Apartment",
                 location: "Mina Al Arab, Ras Al Khaimah",
-                emirate: "RAK",
+                category: "RAK",
                 type: "Residential",
                 beds: 2,
                 price: "95,000 AED / year",
@@ -727,7 +730,7 @@
                 id: "OSP-DXB-01",
                 title: "Prime Commercial Office Space",
                 location: "Business Bay, Dubai",
-                emirate: "Dubai",
+                category: "Dubai",
                 type: "Commercial",
                 beds: "N/A",
                 price: "240,000 AED / year",
@@ -735,6 +738,97 @@
                 image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Business+Bay+Office+DXB",
                 desc: "Fitted high-floor commercial office space with panoramic canal views.",
                 features: ["Fully Fitted", "High Floor", "Valet Parking", "Conference Rooms"]
+            },
+            {
+                id: "OSP-OTH-01",
+                title: "Sharjah Waterfront Residence",
+                location: "Al Mamsha, Sharjah",
+                category: "Other Emirates",
+                type: "Residential",
+                beds: 3,
+                price: "110,000 AED / year",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Sharjah+Waterfront",
+                desc: "Spacious 3-bedroom apartment in a vibrant community featuring walking trails and retail.",
+                features: ["Walkable Community", "Retail Access", "Covered Parking", "Family Parks"]
+            },
+            {
+                id: "RAKEZ-COM-01",
+                title: "Al Ghail Industrial Zone",
+                location: "RAKEZ, Ras Al Khaimah",
+                category: "Commercial",
+                type: "Industrial Zone",
+                beds: "Land Plots",
+                price: "Custom Leasing",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Al+Ghail+Industrial+Zone",
+                desc: "Large-scale industrial manufacturing and processing operations.",
+                features: ["Best For: Large-scale industrial manufacturing and processing operations.", "Heavy Power Supply", "Direct Highway Access"]
+            },
+            {
+                id: "RAKEZ-COM-02",
+                title: "Al Hamra Industrial Zone",
+                location: "RAKEZ, Ras Al Khaimah",
+                category: "Commercial",
+                type: "Industrial Zone",
+                beds: "Land / Warehouses",
+                price: "Custom Leasing",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Al+Hamra+Industrial+Zone",
+                desc: "Light and heavy industry projects requiring large land spaces and on-site staff accommodations.",
+                features: ["Best For: Light and heavy industry projects requiring large land spaces and on-site staff accommodations.", "Staff Accommodation", "Warehousing"]
+            },
+            {
+                id: "RAKEZ-COM-03",
+                title: "Al Hulaila Industrial Zone",
+                location: "RAKEZ, Ras Al Khaimah",
+                category: "Commercial",
+                type: "Industrial Zone",
+                beds: "Maritime Plots",
+                price: "Custom Leasing",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Al+Hulaila+Industrial+Zone",
+                desc: "Heavy manufacturing and maritime-related industrial projects due to its close proximity to Saqr Port.",
+                features: ["Best For: Heavy manufacturing and maritime-related industrial projects due to its close proximity to Saqr Port.", "Port Proximity", "Heavy Duty Infrastructure"]
+            },
+            {
+                id: "RAKEZ-COM-04",
+                title: "Al Nakheel Business Zone",
+                location: "RAKEZ, Ras Al Khaimah",
+                category: "Commercial",
+                type: "Business Center",
+                beds: "Offices / Desks",
+                price: "Custom Leasing",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Al+Nakheel+Business+Zone",
+                desc: "Small and medium enterprises (SMEs), startups, freelancers, and service providers looking for cost-effective business centers.",
+                features: ["Best For: Small and medium enterprises (SMEs), startups, freelancers, and service providers looking for cost-effective business centers.", "Flexible Desks", "Instant Licensing Support"]
+            },
+            {
+                id: "RAKEZ-COM-05",
+                title: "Al Hamra Business Zone",
+                location: "RAKEZ, Ras Al Khaimah",
+                category: "Commercial",
+                type: "Corporate Offices",
+                beds: "Offices",
+                price: "Custom Leasing",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Al+Hamra+Business+Zone",
+                desc: "Corporate offices, trading companies, and businesses requiring easy transit between Ras Al Khaimah and neighboring emirates.",
+                features: ["Best For: Corporate offices, trading companies, and businesses requiring easy transit between Ras Al Khaimah and neighboring emirates.", "Strategic Location", "High-End Finishes"]
+            },
+            {
+                id: "RAKEZ-COM-06",
+                title: "RAKEZ Academic Zone",
+                location: "RAKEZ, Ras Al Khaimah",
+                category: "Commercial",
+                type: "Educational Zone",
+                beds: "Campuses",
+                price: "Custom Leasing",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=RAKEZ+Academic+Zone",
+                desc: "International schools, universities, training providers, and educational support services.",
+                features: ["Best For: International schools, universities, training providers, and educational support services.", "Educational Campus Setup", "Dedicated Community"]
             }
         ];
 
@@ -810,7 +904,7 @@
                         <div class="relative overflow-hidden h-52 bg-forest">
                             <img src="${prop.image}" alt="${prop.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-forest text-gold text-xs font-bold uppercase border border-gold/40">
-                                ${prop.emirate}
+                                ${prop.category}
                             </span>
                             <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-semibold">
                                 ${prop.status}
@@ -818,7 +912,7 @@
                         </div>
                         <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                             <div>
-                                <span class="text-xs text-gold font-semibold uppercase tracking-wider block mb-1">${prop.type} • ${prop.beds} Beds</span>
+                                <span class="text-xs text-gold font-semibold uppercase tracking-wider block mb-1">${prop.type} • ${prop.beds}</span>
                                 <h3 class="font-cinzel text-xl font-bold text-forest mb-1">${prop.title}</h3>
                                 <p class="text-xs text-charcoal/70 flex items-center gap-1 mb-3">
                                     <i class="fas fa-map-marker-alt text-gold"></i> ${prop.location}
@@ -826,9 +920,9 @@
                                 <p class="text-xs text-charcoal/80 line-clamp-2">${prop.desc}</p>
                             </div>
                             <div class="pt-4 border-t border-gold/20 flex justify-between items-center">
-                                <span class="font-cinzel font-bold text-forest text-sm sm:text-base">${prop.price}</span>
+                                <span class="font-cinzel font-bold text-forest text-xs sm:text-sm">${prop.price}</span>
                                 <button onclick="openPropertyModal('${prop.id}')" class="forest-gradient text-cream px-3.5 py-1.5 rounded text-xs font-semibold hover:opacity-95 transition flex items-center gap-1">
-                                    <i class="fas fa-file-alt"></i> Factsheet
+                                    <i class="fas fa-file-alt"></i> Details
                                 </button>
                             </div>
                         </div>
@@ -847,12 +941,8 @@
 
             if (category === 'all') {
                 renderProperties(propertiesData);
-            } else if (category === 'RAK') {
-                renderProperties(propertiesData.filter(p => p.emirate === 'RAK'));
-            } else if (category === 'Dubai') {
-                renderProperties(propertiesData.filter(p => p.emirate === 'Dubai'));
-            } else if (category === 'Commercial') {
-                renderProperties(propertiesData.filter(p => p.type === 'Commercial'));
+            } else {
+                renderProperties(propertiesData.filter(p => p.category === category));
             }
         }
 
@@ -863,22 +953,22 @@
                 <div class="space-y-4">
                     <div class="flex justify-between items-start">
                         <div>
-                            <span class="text-xs font-bold text-gold uppercase">${prop.emirate} • ${prop.type}</span>
+                            <span class="text-xs font-bold text-gold uppercase">${prop.category} • ${prop.type}</span>
                             <h3 class="font-cinzel text-2xl font-bold text-forest">${prop.title}</h3>
                             <p class="text-xs text-charcoal/70"><i class="fas fa-map-marker-alt text-gold mr-1"></i> ${prop.location}</p>
                         </div>
-                        <span class="font-cinzel font-bold text-forest text-base sm:text-lg">${prop.price}</span>
+                        <span class="font-cinzel font-bold text-forest text-base">${prop.price}</span>
                     </div>
                     <img src="${prop.image}" alt="${prop.title}" class="w-full h-56 object-cover rounded-xl border border-gold/30">
                     <p class="text-sm text-charcoal/80 leading-relaxed">${prop.desc}</p>
                     <div>
-                        <h4 class="font-cinzel font-bold text-forest text-sm mb-2">Key Highlights:</h4>
-                        <div class="grid grid-cols-2 gap-2">
-                            ${prop.features.map(f => `<div class="text-xs bg-gold/10 px-3 py-1.5 rounded border border-gold/30 text-forest flex items-center gap-2"><i class="fas fa-check text-gold"></i> ${f}</div>`).join('')}
+                        <h4 class="font-cinzel font-bold text-forest text-sm mb-2">Highlights & Specifications:</h4>
+                        <div class="grid grid-cols-1 gap-2">
+                            ${prop.features.map(f => `<div class="text-xs bg-gold/10 px-3 py-2 rounded border border-gold/30 text-forest flex items-start gap-2"><i class="fas fa-check text-gold mt-0.5"></i> <span>${f}</span></div>`).join('')}
                         </div>
                     </div>
                     <button onclick="closePropertyModal(); location.href='#contact';" class="w-full gold-gradient text-forest font-bold py-3 rounded-lg text-xs shadow">
-                        Contact Admin for Viewing & Factsheet
+                        Contact Advisory for Inquiry
                     </button>
                 </div>
             `;
