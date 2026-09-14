@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osool Saray Properties Brokerage and Consultancy FZ-LLC</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cinzel & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            DEFAULT: '#1B3B2B',
+                            dark: '#11261C',
+                            light: '#2B5B43'
+                        },
+                        cream: {
+                            DEFAULT: '#F4F1EA',
+                            light: '#FAF8F5',
+                            dark: '#E6E1D3'
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#E2C35E',
+                            dark: '#B08D22'
+                        },
+                        charcoal: '#222222'
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        montserrat: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F4F1EA;
+            color: #222222;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #E2C35E 50%, #B08D22 100%);
+        }
+        .forest-gradient {
+            background: linear-gradient(135deg, #1B3B2B 0%, #2B5B43 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F1EA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1B3B2B;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-cream text-charcoal antialiased selection:bg-gold selection:text-forest">
+
+    <!-- Top Bar Contact Info -->
+    <div class="bg-forest text-cream text-xs py-2 px-4 sm:px-8 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6 flex-wrap">
+                <span><i class="fas fa-map-marker-alt text-gold mr-2"></i>Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, RAK, UAE</span>
+                <span><i class="fas fa-envelope text-gold mr-2"></i>admin@osoolsarayproperties.com</span>
+                <span><i class="fas fa-phone-alt text-gold mr-2"></i>+971 58 268 4998</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-gold font-medium italic">Professional Advice. Practical Solutions.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md shadow-sm border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full forest-gradient flex items-center justify-center text-gold font-cinzel font-bold text-xl shadow-md border border-gold/50">
+                    OS
+                </div>
+                <div>
+                    <span class="font-cinzel font-bold text-lg sm:text-xl tracking-wider text-forest block">Osool Saray</span>
+                    <span class="text-[9px] tracking-widest text-gold uppercase font-semibold block">Properties Brokerage & Consultancy FZ-LLC</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="#home" class="text-forest hover:text-gold transition font-semibold">Home</a>
+                <a href="#about" class="text-charcoal hover:text-gold transition">About Us</a>
+                <a href="#realestate" class="text-charcoal hover:text-gold transition">Real Estate</a>
+                <a href="#services" class="text-charcoal hover:text-gold transition">Business Activities</a>
+                <a href="#partners" class="text-charcoal hover:text-gold transition">Partners & Landlords</a>
+                <a href="#crm" class="text-charcoal hover:text-gold transition text-gold font-semibold flex items-center gap-1"><i class="fas fa-database text-xs"></i> CRM Portal</a>
+                <a href="#contact" class="text-charcoal hover:text-gold transition">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#crm" class="gold-gradient text-forest px-5 py-2 rounded-md text-sm font-bold shadow hover:opacity-95 transition flex items-center gap-2">
+                    <i class="fas fa-user-shield"></i> CRM Login
+                </a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="lg:hidden text-forest text-2xl p-2 focus:outline-none">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-cream border-b border-gold/20 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#home" onclick="toggleMobileMenu()" class="block text-forest font-semibold py-1">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-charcoal py-1">About Us</a>
+            <a href="#realestate" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Real Estate</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Business Activities</a>
+            <a href="#partners" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Partners & Landlords</a>
+            <a href="#crm" onclick="toggleMobileMenu()" class="block text-gold font-semibold py-1">CRM Portal</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-charcoal py-1">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-forest text-cream py-20 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="absolute right-0 bottom-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/20 border border-gold/40 text-gold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fas fa-certificate"></i> RAKEZ Licensed Entity (CWEP8470)
+                </div>
+                <h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                    Professional Advice. <span class="text-gold">Practical Solutions.</span>
+                </h1>
+                <p class="text-cream/90 text-base sm:text-lg font-light leading-relaxed max-w-2xl">
+                    Specialized RAK-based brokerage and institutional consultancy delivering tailored real estate leasing, investment analysis, asset management, and corporate business solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#realestate" class="gold-gradient text-forest font-bold px-8 py-3.5 rounded-md shadow-lg text-center hover:opacity-95 transition flex items-center justify-center gap-2">
+                        Explore Portfolio <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#crm" class="bg-transparent hover:bg-cream/10 text-cream font-semibold px-8 py-3.5 rounded-md border border-gold/50 text-center transition flex items-center justify-center gap-2">
+                        Client & Agent CRM <i class="fas fa-database"></i>
+                    </a>
+                </div>
+
+                <div class="pt-8 grid grid-cols-3 gap-4 border-t border-gold/20 text-xs sm:text-sm text-cream/80">
+                    <div>
+                        <span class="block font-cinzel font-bold text-gold text-xl">8</span>
+                        Official Activities
+                    </div>
+                    <div>
+                        <span class="block font-cinzel font-bold text-gold text-xl">RAK & UAE</span>
+                        Core Operations Hub
+                    </div>
+                    <div>
+                        <span class="block font-cinzel font-bold text-gold text-xl">100%</span>
+                        Secure Workflows
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Inquiry Card -->
+            <div class="lg:col-span-5 bg-cream text-charcoal p-6 sm:p-8 rounded-2xl shadow-2xl border border-gold/30">
+                <h3 class="font-cinzel text-2xl font-bold text-forest mb-2">Direct Enquiry</h3>
+                <p class="text-xs text-charcoal/70 mb-6">Connect directly with our administrative team for immediate assistance.</p>
+                
+                <form id="public-enquiry-form" onsubmit="handlePublicEnquiry(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-forest mb-1">Full Name *</label>
+                        <input type="text" id="enq-name" required placeholder="e.g. Alexander Vance" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-forest mb-1">Email Address *</label>
+                            <input type="email" id="enq-email" required placeholder="alex@domain.com" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-forest mb-1">Phone / WhatsApp *</label>
+                            <input type="tel" id="enq-phone" required placeholder="+971 50 123 4567" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-forest mb-1">Service Interest</label>
+                        <select id="enq-service" class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest">
+                            <option value="Real Estate Leasing">Real Estate Leasing Brokerage</option>
+                            <option value="Property Management">Property Management Services</option>
+                            <option value="Investment Consultancy">Investment Consultancy</option>
+                            <option value="Mortgage Brokerage">Mortgage Brokerage</option>
+                            <option value="Commercial Brokers">Commercial Brokers</option>
+                            <option value="Document Clearing">Document Clearing Services</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-forest mb-1">Message / Requirements</label>
+                        <textarea id="enq-msg" rows="3" placeholder="Specify your property requirements or corporate consultancy needs..." class="w-full px-4 py-2.5 rounded-lg border border-gold/40 bg-white text-sm focus:outline-none focus:border-forest"></textarea>
+                    </div>
+                    <button type="submit" class="w-full forest-gradient text-cream py-3 rounded-lg font-semibold shadow hover:opacity-95 transition text-sm flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane text-gold"></i> Submit Enquiry
+                    </button>
+                </form>
+                <div id="enquiry-success" class="hidden mt-4 p-4 bg-forest/10 border border-forest rounded-lg text-forest text-sm text-center">
+                    <i class="fas fa-check-circle text-lg text-forest mb-1 block"></i>
+                    Enquiry submitted successfully and logged to CRM!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <span class="text-gold font-semibold tracking-widest uppercase text-xs">About Osool Saray</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-forest">Institutional Excellence & Boutique Advisory</h2>
+                <p class="text-charcoal/80 text-base leading-relaxed">
+                    Based in the vibrant business ecosystem of Ras Al Khaimah Economic Zone (RAKEZ), Osool Saray Properties Brokerage and Consultancy FZ-LLC is built upon the foundational corporate motto: <strong>Professional Advice. Practical Solutions.</strong>
+                </p>
+                <p class="text-charcoal/80 text-base leading-relaxed">
+                    We bridge international investors, landlords, and corporate entities with precision market insight, comprehensive leasing management, and fully compliant business support services across the UAE.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="bg-cream-dark p-4 rounded-xl border border-gold/30">
+                        <h4 class="font-cinzel font-bold text-forest mb-1">Registered Address</h4>
+                        <p class="text-xs text-charcoal/70">CWEP8470, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, RAK, UAE</p>
+                    </div>
+                    <div class="bg-cream-dark p-4 rounded-xl border border-gold/30">
+                        <h4 class="font-cinzel font-bold text-forest mb-1">Direct Contact</h4>
+                        <p class="text-xs text-charcoal/70">Phone/WhatsApp: +971 58 268 4998<br>Email: admin@osoolsarayproperties.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-6 bg-forest text-cream p-8 rounded-2xl shadow-xl border border-gold/40 space-y-6">
+                <h3 class="font-cinzel text-2xl font-bold text-gold">Our Core Commitments</h3>
+                <div class="space-y-4 text-sm text-cream/90">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-gold mt-1"></i>
+                        <div>
+                            <strong class="text-gold">Regulatory Compliance:</strong> Operating strictly within RAKEZ guidelines and official licensing parameters.
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-gold mt-1"></i>
+                        <div>
+                            <strong class="text-gold">Transparent Workflows:</strong> Utilizing dedicated CRM and agreement tracking frameworks for complete client accountability.
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-gold mt-1"></i>
+                        <div>
+                            <strong class="text-gold">Strategic Tailoring:</strong> Customizing investment advisory and asset management to maximize client returns.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Estate Portfolio -->
+    <section id="realestate" class="bg-cream-dark py-20 border-y border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="text-gold font-semibold tracking-widest uppercase text-xs">Featured Portfolio</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-forest">Real Estate Leasing & Management</h2>
+                <p class="text-charcoal/80 text-sm sm:text-base">
+                    Explore our premier rental and leasing properties in Ras Al Khaimah and across key UAE communities.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-3 pt-4">
+                    <button onclick="filterProperties('all')" class="prop-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-forest text-cream transition shadow">All Listings</button>
+                    <button onclick="filterProperties('RAK')" class="prop-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Ras Al Khaimah</button>
+                    <button onclick="filterProperties('Dubai')" class="prop-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Dubai / Sharjah</button>
+                    <button onclick="filterProperties('Commercial')" class="prop-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cream border border-gold/50 text-forest hover:bg-gold/10 transition">Commercial</button>
+                </div>
+            </div>
+
+            <div id="property-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 Licensed Business Activities Grid -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <span class="text-gold font-semibold tracking-widest uppercase text-xs">RAKEZ Official Licensing</span>
+            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-forest">Our 8 Licensed Business Activities</h2>
+            <p class="text-charcoal/80 text-sm sm:text-base">
+                Comprehensively authorized to deliver professional advisory, brokerage, management, and administrative services.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: 6820012</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Real Estate Leasing Brokerage</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Connecting landlords and tenants regarding property leases against remuneration, concluding upon successful agreement execution.
+                </p>
+            </div>
+
+            <!-- 2 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: 6820001</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Property Management Services</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Managing residential, commercial, industrial buildings, and offices, restricted to long-term or temporary renting, improvement, and maintenance.
+                </p>
+            </div>
+
+            <!-- 3 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: 68200-05</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Real Estate Consultancy</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Providing expert advice on market trends, property values, investment opportunities, legal/financial aspects, and ROI optimization.
+                </p>
+            </div>
+
+            <!-- 4 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: RAKEZ/2017/55</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Investment Consultancy</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Non-discretionary investment research, market analysis, and strategic consultancy restricted to institutional and corporate clients.
+                </p>
+            </div>
+
+            <!-- 5 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: 66190-05</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Mortgage Broker</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Assisting borrowers in securing optimal financing conditions from lenders and commercial banks without exercising direct lending.
+                </p>
+            </div>
+
+            <!-- 6 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: 4610010</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Commercial Brokers</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Bringing together buyers and sellers involved in general trade, commercial domains, and finance (excluding direct trading on own account).
+                </p>
+            </div>
+
+            <!-- 7 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: 741302</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Marketing Management</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Assisting businesses with product/service promotion, planning, pricing, sale outlets, and digital marketing strategies.
+                </p>
+            </div>
+
+            <!-- 8 -->
+            <div class="bg-white p-8 rounded-xl shadow border border-gold/30 hover:border-forest transition group">
+                <span class="text-[10px] font-bold text-gold uppercase tracking-wider block mb-2">Code: 749906</span>
+                <h3 class="font-cinzel text-xl font-bold text-forest mb-3">Document Clearing Services</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Submitting personal and corporate documents to government and non-government bodies until finalization (excluding medical-fitness services).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner & Landlord Section -->
+    <section id="partners" class="bg-cream-dark py-20 border-y border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-gold font-semibold tracking-widest uppercase text-xs">B2B & Owner Collaboration</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-forest">Landlord & Partner Network</h2>
+                    <p class="text-charcoal/80 text-base leading-relaxed">
+                        List your property with Osool Saray for professional leasing administration, or connect as a partner brokerage for cross-emirate collaborative opportunities.
+                    </p>
+                    <div class="space-y-3 text-sm text-charcoal/80">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i> Secure online listing submissions routed directly to our CRM.
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i> Dedicated administrative verification and agreement generation workflow.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 bg-forest text-cream p-8 rounded-2xl shadow-xl border border-gold/40">
+                    <h3 class="font-cinzel text-2xl font-bold text-gold mb-2">Partner & Landlord Submission</h3>
+                    <p class="text-xs text-cream/80 mb-6">Submit details to initiate your secure partnership workflow.</p>
+
+                    <form id="partner-submission-form" onsubmit="handlePartnerSubmission(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-gold mb-1">Your Name *</label>
+                                <input type="text" id="part-name" required placeholder="Full Name" class="w-full px-4 py-2.5 rounded-lg border border-gold/30 bg-forest-dark text-cream text-sm focus:outline-none focus:border-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-gold mb-1">Entity Type *</label>
+                                <select id="part-type" class="w-full px-4 py-2.5 rounded-lg border border-gold/30 bg-forest-dark text-cream text-sm focus:outline-none focus:border-gold">
+                                    <option value="Property Owner">Property Owner / Landlord</option>
+                                    <option value="Real Estate Partner">Real Estate Brokerage Partner</option>
+                                    <option value="Corporate Client">Corporate Client</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-gold mb-1">Email Address *</label>
+                                <input type="email" id="part-email" required placeholder="owner@domain.com" class="w-full px-4 py-2.5 rounded-lg border border-gold/30 bg-forest-dark text-cream text-sm focus:outline-none focus:border-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-gold mb-1">Phone / WhatsApp *</label>
+                                <input type="tel" id="part-phone" required placeholder="+971 50 123 4567" class="w-full px-4 py-2.5 rounded-lg border border-gold/30 bg-forest-dark text-cream text-sm focus:outline-none focus:border-gold">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gold mb-1">Property Location / Details</label>
+                            <input type="text" id="part-location" placeholder="e.g. Al Hamra Village, RAK or Community Name" class="w-full px-4 py-2.5 rounded-lg border border-gold/30 bg-forest-dark text-cream text-sm focus:outline-none focus:border-gold">
+                        </div>
+                        <button type="submit" class="w-full gold-gradient text-forest font-bold py-3.5 rounded-lg shadow hover:opacity-95 transition text-sm">
+                            Submit Partner Request to CRM
+                        </button>
+                    </form>
+                    <div id="partner-success" class="hidden mt-4 p-4 bg-gold/20 border border-gold rounded-lg text-cream text-sm text-center">
+                        <i class="fas fa-check-circle text-lg text-gold mb-1 block"></i>
+                        Submitted successfully! Logged into CRM queue.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRM & Staff Portal Section (Separated & Fully Featured) -->
+    <section id="crm" class="py-20 max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="bg-forest text-cream rounded-3xl p-8 sm:p-12 shadow-2xl border border-gold/40">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-gold/20">
+                <div>
+                    <span class="text-gold font-semibold tracking-widest uppercase text-xs">Internal Operations</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold">Osool Saray CRM & Portal</h2>
+                    <p class="text-cream/80 text-sm mt-1">Role-based access control, lead queue management, agreement generation, and pipeline tracking.</p>
+                </div>
+                <div class="flex items-center gap-3 bg-forest-dark p-3 rounded-xl border border-gold/30">
+                    <label class="text-xs text-gold font-semibold uppercase">Active CRM Role:</label>
+                    <select id="active-role-select" onchange="switchStaffRole(this.value)" class="bg-forest text-cream border border-gold/40 rounded px-3 py-1.5 text-xs font-semibold focus:outline-none">
+                        <option value="admin">Admin (admin@osoolsarayproperties.com)</option>
+                        <option value="salesdirector">Sales Director / Managing Partner</option>
+                        <option value="propertyadvisor">Property Advisor / Leasing Specialist</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- CRM Tab Nav -->
+            <div class="flex flex-wrap gap-2 pt-6 pb-6 border-b border-gold/10">
+                <button onclick="switchCrmTab('queue')" id="crm-btn-queue" class="px-4 py-2 rounded text-xs font-semibold bg-gold text-forest transition shadow flex items-center gap-2">
+                    <i class="fas fa-inbox"></i> Lead Queue <span id="crm-queue-count" class="bg-forest text-gold px-1.5 py-0.5 rounded-full text-[10px]">3</span>
+                </button>
+                <button onclick="switchCrmTab('pipeline')" id="crm-btn-pipeline" class="px-4 py-2 rounded text-xs font-semibold bg-cream/10 text-cream hover:bg-cream/20 transition flex items-center gap-2">
+                    <i class="fas fa-project-diagram"></i> Active Pipeline
+                </button>
+                <button onclick="switchCrmTab('agreements')" id="crm-btn-agreements" class="px-4 py-2 rounded text-xs font-semibold bg-cream/10 text-cream hover:bg-cream/20 transition flex items-center gap-2">
+                    <i class="fas fa-file-contract"></i> Agreements & PDFs <span id="crm-agr-count" class="bg-gold text-forest px-1.5 py-0.5 rounded-full text-[10px]">2</span>
+                </button>
+                <button onclick="switchCrmTab('team')" id="crm-btn-team" class="px-4 py-2 rounded text-xs font-semibold bg-cream/10 text-cream hover:bg-cream/20 transition flex items-center gap-2">
+                    <i class="fas fa-users"></i> Team Directory
+                </button>
+            </div>
+
+            <!-- CRM Tab Contents -->
+            <div class="pt-6">
+                <!-- Tab 1: Lead Queue -->
+                <div id="crm-tab-queue" class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-cinzel font-bold text-lg text-gold">Incoming Leads & Inquiries Queue</h4>
+                        <button onclick="openAddLeadModal()" class="gold-gradient text-forest px-4 py-1.5 rounded text-xs font-bold">Add Manual Lead</button>
+                    </div>
+                    <div class="overflow-x-auto bg-forest-dark rounded-xl border border-gold/20">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-forest text-gold font-cinzel uppercase">
+                                <tr>
+                                    <th class="p-3">Lead ID</th>
+                                    <th class="p-3">Client Name</th>
+                                    <th class="p-3">Source / Interest</th>
+                                    <th class="p-3">Assignee</th>
+                                    <th class="p-3">Status</th>
+                                    <th class="p-3 text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="crm-queue-tbody" class="divide-y divide-gold/10">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Active Pipeline -->
+                <div id="crm-tab-pipeline" class="hidden space-y-4">
+                    <h4 class="font-cinzel font-bold text-lg text-gold">My Active Lead Pipeline & Client Follow-ups</h4>
+                    <div id="crm-pipeline-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Populated via JS -->
+                    </div>
+                </div>
+
+                <!-- Tab 3: Agreements & PDFs -->
+                <div id="crm-tab-agreements" class="hidden space-y-4">
+                    <h4 class="font-cinzel font-bold text-lg text-gold">Secure Agreement Verification & PDF Issuance</h4>
+                    <div id="crm-agreements-list" class="space-y-4">
+                        <!-- Populated via JS -->
+                    </div>
+                </div>
+
+                <!-- Tab 4: Team Directory -->
+                <div id="crm-tab-team" class="hidden space-y-4">
+                    <h4 class="font-cinzel font-bold text-lg text-gold">Osool Saray Management & Staff Structure</h4>
+                    <div class="bg-forest-dark p-6 rounded-xl border border-gold/20 space-y-3 text-xs">
+                        <div class="grid grid-cols-3 font-cinzel text-gold font-bold border-b border-gold/20 pb-2">
+                            <div>Name / Role</div>
+                            <div>Email</div>
+                            <div>Responsibilities</div>
+                        </div>
+                        <div class="grid grid-cols-3 py-2 border-b border-gold/10 items-center">
+                            <div><strong>Admin</strong><br><span class="text-gold">System Admin</span></div>
+                            <div>admin@osoolsarayproperties.com</div>
+                            <div>CRM oversight, document clearing, agreement verification</div>
+                        </div>
+                        <div class="grid grid-cols-3 py-2 border-b border-gold/10 items-center">
+                            <div><strong>Sales Director</strong><br><span class="text-gold">Management</span></div>
+                            <div>sales@osoolsarayproperties.com</div>
+                            <div>Leasing supervision, investment consultancy coordination</div>
+                        </div>
+                        <div class="grid grid-cols-3 py-2 items-center">
+                            <div><strong>Property Advisor</strong><br><span class="text-gold">Sales & Leasing</span></div>
+                            <div>advisor@osoolsarayproperties.com</div>
+                            <div>Client viewings, property management, mortgage brokerage liaison</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-forest-dark text-cream pt-16 pb-12 border-t border-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full gold-gradient flex items-center justify-center text-forest font-cinzel font-bold text-lg">
+                        OS
+                    </div>
+                    <span class="font-cinzel font-bold text-lg tracking-wider text-cream">Osool Saray</span>
+                </div>
+                <p class="text-cream/70 text-xs leading-relaxed">
+                    Osool Saray Properties Brokerage and Consultancy FZ-LLC. RAKEZ Licensed Entity (CWEP8470).
+                </p>
+                <p class="text-xs text-gold italic font-semibold">Professional Advice. Practical Solutions.</p>
+            </div>
+
+            <div>
+                <h4 class="font-cinzel font-bold text-gold text-base mb-4">Contact Details</h4>
+                <div class="space-y-2 text-xs text-cream/80">
+                    <p><i class="fas fa-map-marker-alt text-gold mr-2"></i> CWEP8470, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE</p>
+                    <p><i class="fas fa-envelope text-gold mr-2"></i> admin@osoolsarayproperties.com</p>
+                    <p><i class="fas fa-phone-alt text-gold mr-2"></i> +971 58 268 4998</p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-cinzel font-bold text-gold text-base mb-4">Core Services</h4>
+                <ul class="space-y-2 text-xs text-cream/80">
+                    <li>Real Estate Leasing Brokerage</li>
+                    <li>Property Management Services</li>
+                    <li>Real Estate & Investment Consultancy</li>
+                    <li>Mortgage Brokerage</li>
+                    <li>Commercial Brokers & Document Clearing</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-cinzel font-bold text-gold text-base mb-4">Connect on Social Media</h4>
+                <div class="flex flex-col space-y-2 text-xs text-cream/80">
+                    <a href="https://linkedin.com/company/osool-saray-properties-brokerage-and-consultancy-fz-llc" target="_blank" class="hover:text-gold transition flex items-center gap-2"><i class="fab fa-linkedin text-gold w-4"></i> LinkedIn</a>
+                    <a href="https://www.instagram.com/osoolsarayproperties" target="_blank" class="hover:text-gold transition flex items-center gap-2"><i class="fab fa-instagram text-gold w-4"></i> Instagram</a>
+                    <a href="https://www.facebook.com/osoolsarayproperties" target="_blank" class="hover:text-gold transition flex items-center gap-2"><i class="fab fa-facebook text-gold w-4"></i> Facebook</a>
+                    <a href="https://www.tiktok.com/@osoolsarayproperties" target="_blank" class="hover:text-gold transition flex items-center gap-2"><i class="fab fa-tiktok text-gold w-4"></i> TikTok</a>
+                    <a href="https://youtube.com/@osoolsarayproperties" target="_blank" class="hover:text-gold transition flex items-center gap-2"><i class="fab fa-youtube text-gold w-4"></i> YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-8 border-t border-gold/10 flex flex-col sm:flex-row justify-between items-center text-xs text-cream/60 gap-4">
+            <p>&copy; 2026 Osool Saray Properties Brokerage and Consultancy FZ-LLC. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+                <a href="#" class="hover:text-gold transition">RAKEZ Compliance</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Property Factsheet Modal -->
+    <div id="property-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-cream text-charcoal max-w-2xl w-full rounded-2xl shadow-2xl border border-gold/50 overflow-hidden relative">
+            <button onclick="closePropertyModal()" class="absolute top-4 right-4 text-charcoal hover:text-forest bg-gold/20 hover:bg-gold/40 w-8 h-8 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-content" class="p-8">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        const propertiesData = [
+            {
+                id: "OSP-RAK-01",
+                title: "Luxury Beachfront Villa",
+                location: "Al Hamra Village, Ras Al Khaimah",
+                emirate: "RAK",
+                type: "Residential",
+                beds: 4,
+                price: "185,000 AED / year",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Al+Hamra+Villa+RAK",
+                desc: "Stunning 4-bedroom beachfront villa with private garden and direct beach access.",
+                features: ["Private Beach Access", "Swimming Pool", "Covered Parking", "24/7 Security"]
+            },
+            {
+                id: "OSP-RAK-02",
+                title: "Marina View Executive Apartment",
+                location: "Mina Al Arab, Ras Al Khaimah",
+                emirate: "RAK",
+                type: "Residential",
+                beds: 2,
+                price: "95,000 AED / year",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Mina+Al+Arab+Apartment",
+                desc: "Modern 2-bedroom apartment overlooking the pristine lagoons of Mina Al Arab.",
+                features: ["Lagoon View", "Balcony", "Gym & Pool Access", "Built-in Wardrobes"]
+            },
+            {
+                id: "OSP-DXB-01",
+                title: "Prime Commercial Office Space",
+                location: "Business Bay, Dubai",
+                emirate: "Dubai",
+                type: "Commercial",
+                beds: "N/A",
+                price: "240,000 AED / year",
+                status: "Available",
+                image: "https://placehold.co/600x400/1B3B2B/D4AF37?text=Business+Bay+Office+DXB",
+                desc: "Fitted high-floor commercial office space with panoramic canal views.",
+                features: ["Fully Fitted", "High Floor", "Valet Parking", "Conference Rooms"]
+            }
+        ];
+
+        let crmLeads = [
+            { id: "LEAD-101", name: "Marc Dubois", email: "m.dubois@invest.fr", phone: "+33 6 12 34 56 78", source: "Website Enquiry", interest: "Al Hamra Villa RAK", assignee: "admin", stage: "Enquiry", status: "Verified" },
+            { id: "LEAD-102", name: "Satoshi Tanaka", email: "tanaka@tokyo-cap.jp", phone: "+81 3 5555 0192", source: "Partner Submission", interest: "Business Bay Office", assignee: "salesdirector", stage: "Consultation", status: "Active" },
+            { id: "LEAD-103", name: "Elena Rostova", email: "elena@moscow-holding.ru", phone: "+7 999 123 4567", source: "Direct Contact", interest: "Mina Al Arab Apartment", assignee: "propertyadvisor", stage: "Proposal", status: "Active" }
+        ];
+
+        let agreementRequests = [
+            { 
+                id: "AGR-901", 
+                lead: "LEAD-101 (Marc Dubois)", 
+                type: "Leasing Brokerage Agreement", 
+                status: "Awaiting Admin Review", 
+                ownerStatus: "Details Submitted", 
+                assignedBy: "propertyadvisor",
+                pdfLink: null,
+                signingLink: null
+            },
+            { 
+                id: "AGR-902", 
+                lead: "LEAD-103 (Elena Rostova)", 
+                type: "Property Management Agreement", 
+                status: "Awaiting Owner Signature", 
+                ownerStatus: "Verified & PDF Generated", 
+                assignedBy: "salesdirector",
+                pdfLink: "https://osoolsarayproperties.com/storage/agreements/AGR-902-verified.pdf",
+                signingLink: "https://osoolsarayproperties.com/secure/sign?token=sign_xyz902"
+            }
+        ];
+
+        let currentActiveRole = "admin";
+
+        window.onload = function() {
+            renderProperties(propertiesData);
+            renderCrmQueue();
+            renderCrmPipeline();
+            renderCrmAgreements();
+        };
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function renderProperties(data) {
+            const grid = document.getElementById('property-grid');
+            grid.innerHTML = '';
+            data.forEach(prop => {
+                grid.innerHTML += `
+                    <div class="bg-white rounded-2xl shadow-lg border border-gold/30 overflow-hidden flex flex-col hover:shadow-2xl transition group">
+                        <div class="relative overflow-hidden h-56 bg-forest">
+                            <img src="${prop.image}" alt="${prop.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-forest text-gold text-xs font-bold uppercase border border-gold/40">
+                                ${prop.emirate}
+                            </span>
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-semibold">
+                                ${prop.status}
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <span class="text-xs text-gold font-semibold uppercase tracking-wider block mb-1">${prop.type} • ${prop.beds} Beds</span>
+                                <h3 class="font-cinzel text-xl font-bold text-forest mb-1">${prop.title}</h3>
+                                <p class="text-xs text-charcoal/70 flex items-center gap-1 mb-3">
+                                    <i class="fas fa-map-marker-alt text-gold"></i> ${prop.location}
+                                </p>
+                                <p class="text-xs text-charcoal/80 line-clamp-2">${prop.desc}</p>
+                            </div>
+                            <div class="pt-4 border-t border-gold/20 flex justify-between items-center">
+                                <span class="font-cinzel font-bold text-forest text-base">${prop.price}</span>
+                                <button onclick="openPropertyModal('${prop.id}')" class="forest-gradient text-cream px-4 py-2 rounded text-xs font-semibold hover:opacity-95 transition flex items-center gap-1">
+                                    <i class="fas fa-file-alt"></i> Factsheet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function filterProperties(category) {
+            document.querySelectorAll('.prop-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-forest', 'text-cream');
+                btn.classList.add('bg-cream', 'text-forest');
+            });
+            event.target.classList.remove('bg-cream', 'text-forest');
+            event.target.classList.add('bg-forest', 'text-cream', 'shadow');
+
+            if (category === 'all') {
+                renderProperties(propertiesData);
+            } else if (category === 'RAK') {
+                renderProperties(propertiesData.filter(p => p.emirate === 'RAK'));
+            } else if (category === 'Dubai') {
+                renderProperties(propertiesData.filter(p => p.emirate === 'Dubai'));
+            } else if (category === 'Commercial') {
+                renderProperties(propertiesData.filter(p => p.type === 'Commercial'));
+            }
+        }
+
+        function openPropertyModal(id) {
+            const prop = propertiesData.find(p => p.id === id);
+            if (!prop) return;
+            document.getElementById('modal-content').innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-gold uppercase">${prop.emirate} • ${prop.type}</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-forest">${prop.title}</h3>
+                            <p class="text-xs text-charcoal/70"><i class="fas fa-map-marker-alt text-gold mr-1"></i> ${prop.location}</p>
+                        </div>
+                        <span class="font-cinzel font-bold text-forest text-lg">${prop.price}</span>
+                    </div>
+                    <img src="${prop.image}" alt="${prop.title}" class="w-full h-64 object-cover rounded-xl border border-gold/30">
+                    <p class="text-sm text-charcoal/80 leading-relaxed">${prop.desc}</p>
+                    <div>
+                        <h4 class="font-cinzel font-bold text-forest text-sm mb-2">Key Highlights:</h4>
+                        <div class="grid grid-cols-2 gap-2">
+                            ${prop.features.map(f => `<div class="text-xs bg-gold/10 px-3 py-1.5 rounded border border-gold/30 text-forest flex items-center gap-2"><i class="fas fa-check text-gold"></i> ${f}</div>`).join('')}
+                        </div>
+                    </div>
+                    <button onclick="closePropertyModal(); location.href='#contact';" class="w-full gold-gradient text-forest font-bold py-3 rounded-lg text-xs shadow">
+                        Contact Admin for Viewing & Factsheet
+                    </button>
+                </div>
+            `;
+            document.getElementById('property-modal').classList.remove('hidden');
+        }
+
+        function closePropertyModal() {
+            document.getElementById('property-modal').classList.add('hidden');
+        }
+
+        // CRM Functions
+        function switchCrmTab(tab) {
+            ['queue', 'pipeline', 'agreements', 'team'].forEach(t => {
+                document.getElementById(`crm-tab-${t}`).classList.add('hidden');
+                document.getElementById(`crm-btn-${t}`).classList.remove('bg-gold', 'text-forest');
+                document.getElementById(`crm-btn-${t}`).classList.add('bg-cream/10', 'text-cream');
+            });
+            document.getElementById(`crm-tab-${tab}`).classList.remove('hidden');
+            document.getElementById(`crm-btn-${tab}`).classList.remove('bg-cream/10', 'text-cream');
+            document.getElementById(`crm-btn-${tab}`).classList.add('bg-gold', 'text-forest');
+        }
+
+        function switchStaffRole(role) {
+            currentActiveRole = role;
+            renderCrmQueue();
+            renderCrmPipeline();
+        }
+
+        function renderCrmQueue() {
+            const tbody = document.getElementById('crm-queue-tbody');
+            tbody.innerHTML = '';
+            crmLeads.forEach(l => {
+                tbody.innerHTML += `
+                    <tr class="hover:bg-forest transition">
+                        <td class="p-3 font-semibold text-gold">${l.id}</td>
+                        <td class="p-3">${l.name}<br><span class="text-[10px] text-cream/60">${l.email}</span></td>
+                        <td class="p-3">${l.source}<br><span class="text-[10px] text-gold">${l.interest}</span></td>
+                        <td class="p-3 text-gold font-semibold">${l.assignee}</td>
+                        <td class="p-3"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-gold text-[10px]">${l.status}</span></td>
+                        <td class="p-3 text-right">
+                            <button onclick="assignLead('${l.id}')" class="bg-gold text-forest px-3 py-1 rounded text-[10px] font-bold hover:opacity-90">Assign to Me</button>
+                        </td>
+                    </tr>
+                `;
+            });
+            document.getElementById('crm-queue-count').innerText = crmLeads.length;
+        }
+
+        function assignLead(id) {
+            const l = crmLeads.find(x => x.id === id);
+            if (l) {
+                l.assignee = currentActiveRole;
+                l.status = "Assigned";
+                renderCrmQueue();
+                renderCrmPipeline();
+                alert(`Lead ${id} assigned to ${currentActiveRole}`);
+            }
+        }
+
+        function renderCrmPipeline() {
+            const grid = document.getElementById('crm-pipeline-grid');
+            grid.innerHTML = '';
+            const myLeads = crmLeads.filter(l => l.assignee === currentActiveRole);
+            if (myLeads.length === 0) {
+                grid.innerHTML = `<div class="col-span-2 text-center p-6 bg-forest-dark rounded-xl border border-gold/20 text-xs text-cream/60">No leads currently assigned to your role (${currentActiveRole}). Assign leads from the Lead Queue.</div>`;
+                return;
+            }
+            myLeads.forEach(l => {
+                grid.innerHTML += `
+                    <div class="bg-forest-dark p-4 rounded-xl border border-gold/20 space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-xs font-bold text-gold">${l.id} • Stage: ${l.stage}</span>
+                            <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">${l.status}</span>
+                        </div>
+                        <h4 class="font-cinzel font-bold text-base text-cream">${l.name}</h4>
+                        <p class="text-xs text-cream/70"><i class="fas fa-envelope text-gold mr-1"></i> ${l.email} | <i class="fas fa-phone text-gold ml-2 mr-1"></i> ${l.phone}</p>
+                        <p class="text-xs text-gold">Interest: ${l.interest}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function renderCrmAgreements() {
+            const list = document.getElementById('crm-agreements-list');
+            list.innerHTML = '';
+            agreementRequests.forEach(agr => {
+                list.innerHTML += `
+                    <div class="bg-forest-dark p-4 rounded-xl border border-gold/20 space-y-2 text-xs">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gold">${agr.id} • ${agr.type}</span>
+                            <span class="bg-gold/20 text-gold px-2 py-0.5 rounded">${agr.status}</span>
+                        </div>
+                        <p class="text-cream"><strong>Lead / Client:</strong> ${agr.lead}</p>
+                        <p class="text-cream/80"><strong>Owner Status:</strong> ${agr.ownerStatus}</p>
+                        ${agr.pdfLink ? `<p><strong>Generated PDF:</strong> <a href="#" class="text-gold underline">${agr.pdfLink}</a></p>` : `<p class="text-amber-400 italic">Awaiting admin verification & PDF generation.</p>`}
+                        ${currentActiveRole === 'admin' && !agr.pdfLink ? `<button onclick="generateAgrPDF('${agr.id}')" class="gold-gradient text-forest font-bold px-4 py-1.5 rounded text-xs mt-2">Verify & Generate PDF</button>` : ''}
+                    </div>
+                `;
+            });
+            document.getElementById('crm-agr-count').innerText = agreementRequests.length;
+        }
+
+        function generateAgrPDF(id) {
+            const agr = agreementRequests.find(a => a.id === id);
+            if (agr) {
+                agr.pdfLink = `https://osoolsarayproperties.com/storage/agreements/${id}-verified.pdf`;
+                agr.status = "Awaiting Owner Signature";
+                agr.ownerStatus = "Verified & PDF Generated";
+                renderCrmAgreements();
+                alert(`Agreement PDF generated successfully for ${id}`);
+            }
+        }
+
+        function handlePublicEnquiry(e) {
+            e.preventDefault();
+            const name = document.getElementById('enq-name').value;
+            const email = document.getElementById('enq-email').value;
+            const phone = document.getElementById('enq-phone').value;
+            const service = document.getElementById('enq-service').value;
+
+            crmLeads.push({
+                id: `LEAD-${Math.floor(200 + Math.random() * 800)}`,
+                name: name,
+                email: email,
+                phone: phone,
+                source: "Website Form",
+                interest: service,
+                assignee: "admin",
+                stage: "Enquiry",
+                status: "Verified"
+            });
+
+            document.getElementById('public-enquiry-form').reset();
+            document.getElementById('enquiry-success').classList.remove('hidden');
+            renderCrmQueue();
+        }
+
+        function handlePartnerSubmission(e) {
+            e.preventDefault();
+            const name = document.getElementById('part-name').value;
+            const type = document.getElementById('part-type').value;
+            const email = document.getElementById('part-email').value;
+            const phone = document.getElementById('part-phone').value;
+            const location = document.getElementById('part-location').value;
+
+            crmLeads.push({
+                id: `LEAD-${Math.floor(500 + Math.random() * 400)}`,
+                name: name,
+                email: email,
+                phone: phone,
+                source: `Partner Portal (${type})`,
+                interest: location || "General Listing",
+                assignee: "admin",
+                stage: "Qualification",
+                status: "Partner Verified"
+            });
+
+            document.getElementById('partner-submission-form').reset();
+            document.getElementById('partner-success').classList.remove('hidden');
+            renderCrmQueue();
+        }
+    </script>
+</body>
+</html>
